@@ -1,0 +1,54 @@
+server:
+  port: 8080
+
+spring:
+  datasources:
+      public:
+        url: jdbc:mysql://10.1.6.21:3306/public?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+        username: uuzz
+        password: uuzz123
+        driverClassName: com.mysql.jdbc.Driver
+        default: true
+      order00:
+        url: jdbc:mysql://10.1.6.21:3306/order_00?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+        username: uuzz
+        password: uuzz123
+        driverClassName: com.mysql.jdbc.Driver
+      order01:
+        url: jdbc:mysql://10.1.6.21:3306/order_01?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+        username: uuzz
+        password: uuzz123
+        driverClassName: com.mysql.jdbc.Driver
+      order02:
+        url: jdbc:mysql://10.1.6.21:3306/order_02?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+        username: uuzz
+        password: uuzz123
+        driverClassName: com.mysql.jdbc.Driver
+      order03:
+        url: jdbc:mysql://10.1.6.21:3306/order_03?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+        username: uuzz
+        password: uuzz123
+        driverClassName: com.mysql.jdbc.Driver
+  pool:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat,wall,log4j
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+#http连接池设置
+http:
+  pool:
+    #最大连接数
+    maxConnections: 20
+    #每路最大连接数
+    maxPerRouteConnections: 5
