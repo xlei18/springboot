@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="019212b1-454b-4f29-adc7-7ff1d5a891f9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-erueka/.gitignore" afterPath="$PROJECT_DIR$/springboot-erueka/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-web/.gitignore" afterPath="$PROJECT_DIR$/springboot-web/.gitignore" />
     </list>
     <ignored path="springboot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1000,8 +997,16 @@
       <workItem from="1478740943701" duration="21968000" />
       <workItem from="1478827414371" duration="43000" />
       <workItem from="1478828750234" duration="377000" />
-      <workItem from="1478829196461" duration="707000" />
+      <workItem from="1478829196461" duration="774000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1478830337454</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1478830337454</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1037,7 +1042,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37451000" />
+    <option name="totallyTimeSpent" value="37518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1368" extended-state="6" />
@@ -1084,6 +1089,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
