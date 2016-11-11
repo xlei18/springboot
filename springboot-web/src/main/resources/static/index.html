@@ -1,109 +1,54 @@
-<script src="/webjars/jquery/jquery.min.js"></script>
-<script src="/webjars/sockjs-client/sockjs.min.js"></script>
-<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
 </head>
-<script>
-    var stompClient = null;
-
-    $(function() {
-        startServer();
-    })
-
-    function startServer() {
-        var url = 'http://localhost:8080'
-        var socket = new SockJS(url);
-        stompClient = Stomp.over(socket);
-        stompClient.connect({}, function(frame) {
-            //初始化
-            stompClient.subscribe('/msg/init/' + userId, function (initData) {
-                console.log(initData);
-                var body = JSON.parse(initData.body);
-                var chat = body.chat;
-                chat.forEach(function(item) {
-                    showChat(item);
-                });
-            });
-            //广播回调
-            stompClient.subscribe('/topic/live', function(message){
-                var json = JSON.parse(message.body);
-                showChat(json);
-            });
-            //广播方式实现点对点回调
-            stompClient.subscribe('/topic/point' + userId, function (message) {
-                var json = JSON.parse(message.body);
-                showChat(json);
-            });
-            //点对点方式回调
-            stompClient.subscribe('/user/' + userId + '/message', function(message){
-                var json = JSON.parse(message.body);
-                showChat(json);
-            });
-        });
-
-    }
-
-    function closeServer() {
-        if (stompClient != null) {
-            stompClient.disconnect();
-        }
-    }
-
-    function sendTopic() {
-        var input = $('#topic_input');
-        var inputValue = input.val();
-        input.val("");
-        stompClient.send("/msg/live", {}, JSON.stringify({
-            'name' : encodeURIComponent('广播'),
-            'msg' : encodeURIComponent(inputValue)
-        }));
-    }
-
-    function sendPoint() {
-        var input = $('#point_input');
-        var inputValue = input.val();
-        input.val("");
-        stompClient.send("/msg/point", {}, JSON.stringify({
-            'name' : encodeURIComponent('广播点对点'),
-            'msg': encodeURIComponent(inputValue),
-            'coordinationId': 1
-        }));
-    }
-
-    function sendUser() {
-        var input = $('#user_input');
-        var inputValue = input.val();
-        input.val("");
-        stompClient.send("/msg/message", {}, JSON.stringify({
-            'name' : encodeURIComponent('点对点'),
-            'msg': encodeURIComponent(inputValue),
-            'coordinationId': 'a'
-        }));
-    }
-
-    function showChat(message) {
-        var value = decodeURIComponent(message.name) + ':' + decodeURIComponent(message.msg) + '\n';
-        var content = $("#topic_content").val() + value;
-        $("#topic_content").val(content);
-    }
-</script>
 <body>
-<div>
-    <input id="topic_input" type="text">
-    <input type="button" onclick="sendTopic();" value="send广播">
-</div>
-
-<div>
-    <input id="point_input" type="text">
-    <input type="button" onclick="sendPoint();" value="send广播点对点">
-</div>
-
-<div>
-    <input id="user_input" type="text">
-    <input type="button" onclick="sendUser();" value="send点对点">
-</div>
-
-<div>
-    <textarea id="topic_content" style="width:200px;height:80px;"></textarea>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">WebSocket connection:</label>
+                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">What is your name?</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your name here...">
+                </div>
+                <button id="send" class="btn btn-default" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Greetings</th>
+                </tr>
+                </thead>
+                <tbody id="greetings">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
 </div>
 </body>
 </html>
