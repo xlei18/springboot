@@ -20,14 +20,19 @@ import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
     @Override
-    public void configureMessageBroker(MessageBrokerRegistry config) {
-        config.enableSimpleBroker("/topic");
-        config.setApplicationDestinationPrefixes("/app");
+    public void configureMessageBroker(MessageBrokerRegistry registry) {
+        // 在topi域上可以向客户端发消息
+        registry.enableSimpleBroker("/user","/topic");
+        // 客户端向服务端广播发送时的主题上面需要加”/app”作为前缀
+        registry.setApplicationDestinationPrefixes("/app");
+        registry.setUserDestinationPrefix("/user");
     }
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/gs-guide-websocket").withSockJS();
+        // 这个和客户端创建连接时的url有关,后面在客户端的代码中可以看到,允许跨域
+        registry.addEndpoint("/gs-guide-websocket").setAllowedOrigins("*").withSockJS();
+//        registry.addEndpoint("/toPoint").setAllowedOrigins("*").withSockJS();
     }
 
 }
