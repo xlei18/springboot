@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="019212b1-454b-4f29-adc7-7ff1d5a891f9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/config/WebSocketConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/controller/GreetingController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/entity/Greeting.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/entity/HelloMessage.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/controller/WebSocketController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/TopicMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/UserMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/springboot-web/src/main/java/com/demo/springboot/web/webSocket/WebSocketConfig.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-web/src/main/resources/static/app.js" afterPath="$PROJECT_DIR$/springboot-web/src/main/resources/static/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-web/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/springboot-web/src/main/resources/static/index.html" />
     </list>
     <ignored path="springboot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -131,6 +120,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="leo" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -1181,7 +1175,7 @@
       <workItem from="1478827414371" duration="43000" />
       <workItem from="1478828750234" duration="377000" />
       <workItem from="1478829196461" duration="774000" />
-      <workItem from="1478830531198" duration="1495000" />
+      <workItem from="1478830531198" duration="1536000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1478830337454</created>
@@ -1190,7 +1184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478830337454</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init">
+      <created>1478832071746</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478832071746</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1226,7 +1227,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39013000" />
+    <option name="totallyTimeSpent" value="39054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2182" height="1368" extended-state="6" />
