@@ -22,14 +22,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="springboot-erueka" />
-        <module name="springboot-web" />
+        <module name="demo_springboot_eureka" />
+        <module name="demo_springboot_eureka_client" />
+        <module name="demo_springboot_web" />
+        <module name="java-executor" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="springboot" target="1.8" />
-      <module name="springboot-erueka" target="1.8" />
-      <module name="springboot-web" target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="demo_springboot_eureka" target="1.8" />
+      <module name="demo_springboot_eureka_client" target="1.8" />
+      <module name="demo_springboot_web" target="1.8" />
+      <module name="java-executor" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

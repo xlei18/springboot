@@ -25,6 +25,7 @@
         <module>springboot-web</module>
         <module>springboot-erueka</module>
         <module>springboot-erueka-client</module>
+        <module>java-executor</module>
     </modules>
 
 
