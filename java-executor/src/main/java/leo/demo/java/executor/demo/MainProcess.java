@@ -24,7 +24,7 @@ public class MainProcess {
         for (int i=0; i<5; i++){
             try {
                 String result=results.get(i).get();
-                System.out.printf("Main: Result for Task %d : %s\n",i,result);
+                System.out.printf("Main: 1 Result for Task %d : %s\n",i,result);
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
@@ -35,7 +35,7 @@ public class MainProcess {
         for (int i=5; i<10; i++){
             try {
                 String result=results.get(i).get();
-                System.out.printf("Main: Result for Task %d : %s\n",i,result);
+                System.out.printf("Main: 2 Result for Task %d : %s\n",i,result);
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
