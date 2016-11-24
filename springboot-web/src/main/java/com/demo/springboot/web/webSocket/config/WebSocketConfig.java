@@ -21,7 +21,7 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        // 在topi域上可以向客户端发消息
+        // 在topic域上可以向客户端发消息
         registry.enableSimpleBroker("/user","/topic");
         // 客户端向服务端广播发送时的主题上面需要加”/app”作为前缀
         registry.setApplicationDestinationPrefixes("/app");
