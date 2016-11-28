@@ -1,8 +1,9 @@
 package com.demo.mina.demo;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.Socket;
 
 /**
@@ -12,42 +13,41 @@ public class TcpClient {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-
         Socket socket = null;
-        OutputStream out = null;
-        InputStream in = null;
+        DataOutputStream out = null;
+        DataInputStream in =null;
 
-        try{
+        try {
 
             socket = new Socket("localhost", 8080);
-            out = socket.getOutputStream();
-            in = socket.getInputStream();
+            out = new DataOutputStream(socket.getOutputStream());
+            in = new DataInputStream(socket.getInputStream());
 
             // 请求服务器
-            out.write("第一次请求".getBytes("UTF-8"));
+            String data1 = "牛顿";
+            byte[] outputBytes1 = data1.getBytes("UTF-8");
+            out.writeInt(outputBytes1.length); // write header
+            out.write(outputBytes1); // write body
             out.flush();
 
-            // 获取服务器响应，输出
             byte[] byteArray = new byte[1024];
-            int length = in.read(byteArray);
+            int length = in.read();
             System.out.println(new String(byteArray, 0, length, "UTF-8"));
 
-            Thread.sleep(5000);
-
-            // 再次请求服务器
-            out.write("第二次请求".getBytes("UTF-8"));
+            String data2 = "爱因斯坦";
+            byte[] outputBytes2 = data2.getBytes("UTF-8");
+            out.writeInt(outputBytes2.length); // write header
+            out.write(outputBytes2); // write body
             out.flush();
 
-            // 再次获取服务器响应，输出
             byteArray = new byte[1024];
-            length = in.read(byteArray);
+            length = in.read();
             System.out.println(new String(byteArray, 0, length, "UTF-8"));
-
 
         } finally {
             // 关闭连接
-            in.close();
             out.close();
+            in.close();
             socket.close();
         }
     }

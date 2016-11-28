@@ -1,8 +1,11 @@
 package com.demo.mina.demo;
 
+import org.apache.mina.core.IoUtil;
 import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;
+
+import java.util.Collection;
 
 /**
  * Created by leo on 2016/11/28.
@@ -19,17 +22,19 @@ public class TcpServerHandle extends IoHandlerAdapter {
     public void messageReceived(IoSession session, Object message) throws Exception {
 
         // 接收客户端的数据
-        IoBuffer ioBuffer = (IoBuffer) message;
-        byte[] byteArray = new byte[ioBuffer.limit()];
-        ioBuffer.get(byteArray, 0, ioBuffer.limit());
-        System.out.println("messageReceived:" + new String(byteArray, "UTF-8"));
-
+        String msg = (String) message;
+        System.out.println("===============server接收到请求：" + msg);
+        Thread.sleep(10000);
         // 发送到客户端
-        byte[] responseByteArray = "你好".getBytes("UTF-8");
-        IoBuffer responseIoBuffer = IoBuffer.allocate(responseByteArray.length);
-        responseIoBuffer.put(responseByteArray);
-        responseIoBuffer.flip();
-        session.write(responseIoBuffer);
+        session.write("from service");
+        System.out.println("++++++++++++++++++ 处理完毕");
+
+//        // 获取所有正在连接的IoSession
+//        Collection<IoSession> sessions = session.getService().getManagedSessions().values();
+//        // 将消息写到所有IoSession
+//        IoUtil.broadcast(message, sessions);
+
+
     }
 
     @Override
