@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-erueka-client/demo_springboot_eureka_client.iml" filepath="$PROJECT_DIR$/springboot-erueka-client/demo_springboot_eureka_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-web/demo_springboot_web.iml" filepath="$PROJECT_DIR$/springboot-web/demo_springboot_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-executor/java-executor.iml" filepath="$PROJECT_DIR$/java-executor/java-executor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-executor/leo.demo.executor.iml" filepath="$PROJECT_DIR$/java-executor/leo.demo.executor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mina/mina.iml" filepath="$PROJECT_DIR$/mina/mina.iml" />
     </modules>
   </component>
 </project>

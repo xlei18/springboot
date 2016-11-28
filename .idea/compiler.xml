@@ -26,6 +26,8 @@
         <module name="demo_springboot_eureka_client" />
         <module name="demo_springboot_web" />
         <module name="java-executor" />
+        <module name="leo.demo.executor" />
+        <module name="mina" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -33,6 +35,8 @@
       <module name="demo_springboot_eureka_client" target="1.8" />
       <module name="demo_springboot_web" target="1.8" />
       <module name="java-executor" target="1.8" />
+      <module name="leo.demo.executor" target="1.8" />
+      <module name="mina" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
