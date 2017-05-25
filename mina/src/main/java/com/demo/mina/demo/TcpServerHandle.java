@@ -1,11 +1,7 @@
 package com.demo.mina.demo;
 
-import org.apache.mina.core.IoUtil;
-import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;
-
-import java.util.Collection;
 
 /**
  * Created by leo on 2016/11/28.
@@ -33,7 +29,6 @@ public class TcpServerHandle extends IoHandlerAdapter {
 //        Collection<IoSession> sessions = session.getService().getManagedSessions().values();
 //        // 将消息写到所有IoSession
 //        IoUtil.broadcast(message, sessions);
-
 
     }
 

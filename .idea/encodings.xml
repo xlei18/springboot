@@ -2,10 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/game-mmo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/java-executor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mina" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-erueka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-erueka-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/websocket-tomcat" charset="UTF-8" />
   </component>
 </project>

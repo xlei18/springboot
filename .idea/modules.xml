@@ -5,9 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-erueka/demo_springboot_eureka.iml" filepath="$PROJECT_DIR$/springboot-erueka/demo_springboot_eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-erueka-client/demo_springboot_eureka_client.iml" filepath="$PROJECT_DIR$/springboot-erueka-client/demo_springboot_eureka_client.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-web/demo_springboot_web.iml" filepath="$PROJECT_DIR$/springboot-web/demo_springboot_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game-mmo/game-mmo.iml" filepath="$PROJECT_DIR$/game-mmo/game-mmo.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-executor/java-executor.iml" filepath="$PROJECT_DIR$/java-executor/java-executor.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-executor/leo.demo.executor.iml" filepath="$PROJECT_DIR$/java-executor/leo.demo.executor.iml" />
       <module fileurl="file://$PROJECT_DIR$/mina/mina.iml" filepath="$PROJECT_DIR$/mina/mina.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket-tomcat/websocket-tomcat.iml" filepath="$PROJECT_DIR$/websocket-tomcat/websocket-tomcat.iml" />
     </modules>
   </component>
 </project>

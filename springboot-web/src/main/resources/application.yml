@@ -52,3 +52,7 @@ http:
     maxConnections: 20
     #每路最大连接数
     maxPerRouteConnections: 5
+
+mina:
+  port: 9012
+  readbuffersize: 2048
