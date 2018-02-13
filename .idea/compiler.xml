@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <resourceExtensions />
-    <wildcardResourcePatterns>
-      <entry name="!?*.java" />
-      <entry name="!?*.form" />
-      <entry name="!?*.class" />
-      <entry name="!?*.groovy" />
-      <entry name="!?*.scala" />
-      <entry name="!?*.flex" />
-      <entry name="!?*.kt" />
-      <entry name="!?*.clj" />
-      <entry name="!?*.aj" />
-    </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
+        <module name="com.demo.mina" />
         <module name="demo_springboot_eureka" />
         <module name="demo_springboot_eureka_client" />
         <module name="demo_springboot_web" />
@@ -29,10 +14,12 @@
         <module name="java-executor" />
         <module name="leo.demo.executor" />
         <module name="mina" />
+        <module name="web3j-demo" />
         <module name="websocket-tomcat" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="com.demo.mina" target="1.8" />
       <module name="demo_springboot_eureka" target="1.8" />
       <module name="demo_springboot_eureka_client" target="1.8" />
       <module name="demo_springboot_web" target="1.8" />
@@ -40,6 +27,7 @@
       <module name="java-executor" target="1.8" />
       <module name="leo.demo.executor" target="1.8" />
       <module name="mina" target="1.8" />
+      <module name="web3j-demo" target="1.8" />
       <module name="websocket-tomcat" target="1.8" />
     </bytecodeTargetLevel>
   </component>
