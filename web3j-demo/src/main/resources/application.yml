@@ -1,2 +1,6 @@
 server:
   port: 8080
+
+web3j:
+  client-address: http://10.0.20.47:8545
+  admin-client: true

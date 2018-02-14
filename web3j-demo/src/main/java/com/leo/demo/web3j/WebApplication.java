@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 时 间：2016/10/25 15:12
  */
 @EnableAutoConfiguration
-@SpringBootApplication(scanBasePackages = {"com.demo.springboot.web"})
+@SpringBootApplication(scanBasePackages = {"com.leo.demo.web3j"})
 public class WebApplication {
 
     public static void main(String[] args) {

@@ -9,7 +9,6 @@
       <module fileurl="file://$PROJECT_DIR$/game-mmo/game-mmo.iml" filepath="$PROJECT_DIR$/game-mmo/game-mmo.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-executor/java-executor.iml" filepath="$PROJECT_DIR$/java-executor/java-executor.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-executor/leo.demo.executor.iml" filepath="$PROJECT_DIR$/java-executor/leo.demo.executor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/java-executor/leo.demo.executor.iml" filepath="$PROJECT_DIR$/java-executor/leo.demo.executor.iml" />
       <module fileurl="file://$PROJECT_DIR$/mina/mina.iml" filepath="$PROJECT_DIR$/mina/mina.iml" />
       <module fileurl="file://$PROJECT_DIR$/web3j-demo/web3j-demo.iml" filepath="$PROJECT_DIR$/web3j-demo/web3j-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/websocket-tomcat/websocket-tomcat.iml" filepath="$PROJECT_DIR$/websocket-tomcat/websocket-tomcat.iml" />

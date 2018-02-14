@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+
+    <springProperty name="logging.file" scope="context" source="logging.file"/>
+    <springProperty name="logging.path" scope="context" source="logging.path"/>
+
+    <property name="LOG_PATH" value="${logging.path:-${user.home}/logs}"/>
+    <property name="LOG_FILE" value="${logging.file:-${LOG_PATH}/channel-inceptor-web.log}"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%clr(%date){faint} %clr(%-5level) %clr(%-40.40logger{39}){cyan} %clr(-){faint} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}</file>
+        <encoder>
+            <pattern>%date %-5level %-40.40logger{39} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd-HH}.log.gz</fileNamePattern>
+            <maxHistory>120</maxHistory>
+        </rollingPolicy>
+    </appender>
+    <logger name="java.sql.Connection" level="error"/>
+    <logger name="java.sql.Statement" level="error"/>
+    <logger name="java.sql.PreparedStatement" level="error"/>
+    <logger name="java.sql.ResultSet" level="error"/>
+    <logger name="org.springframework.jdbc" level="error"/>
+    <logger name="org.web3j" level="info"/>
+
+    <root level="INFO">
+<!--         <appender-ref ref="ASYNC-GATEWAY" />
+        <appender-ref ref="ASYNC-STDOUT" /> -->
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
